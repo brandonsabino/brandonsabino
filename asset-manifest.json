@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/brandonsabino/static/css/main.073c9b0a.css",
+    "main.js": "/brandonsabino/static/js/main.2446cfbb.js",
+    "static/js/787.49a08cd4.chunk.js": "/brandonsabino/static/js/787.49a08cd4.chunk.js",
+    "static/media/logo.svg": "/brandonsabino/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/brandonsabino/index.html",
+    "main.073c9b0a.css.map": "/brandonsabino/static/css/main.073c9b0a.css.map",
+    "main.2446cfbb.js.map": "/brandonsabino/static/js/main.2446cfbb.js.map",
+    "787.49a08cd4.chunk.js.map": "/brandonsabino/static/js/787.49a08cd4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.2446cfbb.js"
+  ]
+}
