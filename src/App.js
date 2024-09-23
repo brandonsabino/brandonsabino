@@ -1,13 +1,19 @@
-import logo from './logo.svg';
-import Navigation from './Navigation.js'
-import Main from './Main.js'
+import React from "react";
 import './App.css';
+import Banner from './Banner';
+import Bento from './Bento';
 
 function App() {
   return (
     <div className="App">
-      {/* <Navigation/> */}
-      <Main />
+      <Banner
+        text={'Brandon Sabino'}
+        subtext={'Frontend Developer'}
+        employer={''}
+        employerURL={''}
+        prompt={'Get to know me?'}
+      />
+      <Bento />
     </div>
   );
 }

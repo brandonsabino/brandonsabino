@@ -1,0 +1,135 @@
+/* Tilt Neon */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+/* Protest Guerrilla */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.screen-reader-text {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header {
+  font-family: 'Avenir';
+  margin: 0;
+  color: var(--cardinal-purple);
+}
+
+h1 {
+  font-family: 'Protest Guerrilla';
+  text-transform: capitalize;
+  font-weight: 300;
+  text-shadow: 1px 1px -1px black;
+  font-size: 88px;
+  font-weight: 800;
+}
+
+h3,
+h4 {
+  font-weight: 300;
+  position: relative;
+}
+
+h2 {
+  position: relative;
+  width: fit-content;
+  font-family: 'Protest Guerrilla';
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 100%;
+  bottom: -4px;
+  height: 3px;
+  background-color: var(--slate-gray);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+
+p,
+span {
+  color: #2E0219;
+  font-family: 'Quicksand', 'Avenir';
+  font-weight: 500;
+}
+
+span {
+  font-style: italic;
+  font-size: 20px;
+}
+
+a,
+a:visited {
+  color: #5e3023;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  transition-duration: 300ms;
+  position: relative;
+  width: min-content;
+}
+
+a::before, a::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom: -4px;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+
+a::before {
+  left: 0;
+  width: 100%;
+  background-color: #D3170D;
+}
+
+a:focus {
+  outline: none !important;
+  border: 1px solid #5e3023;
+}
+
+a::after {
+  right: 0;
+  width: 0;
+  background-color: #FABC2A;
+}
+
+a:hover::before
+a:focus::before {
+  width: 0;
+}
+
+a:hover::after,
+a:focus::after {
+  width: 100%;
+}
+
+.connect a::before,
+.connect a::after {
+  content: none;
+}
+
+/* Enable for demos so you don't make yourself look silly */
+/* .projects a {
+  filter: blur(4px);
+} */

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://brandonsabino.github.io/brandonsabino",
+  "homepage": "https://brandonsabino.github.io/",
   "name": "brandonsabino",
   "version": "0.1.0",
   "private": true,
@@ -15,10 +15,11 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "echo 'www.brandonsabino.com' > ./build/CNAME && gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze": "npm run build -- --stats && webpack-bundle-analyzer build/stats.json"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0"
+    "gh-pages": "^6.0.0",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }

@@ -1,0 +1,41 @@
+/* 
+    Icons baby, the stuff of life.
+*/
+
+a.scroll-cta svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+a.scroll-cta::before,
+a.scroll-cta::after {
+  content: none;
+}
+
+path {
+  fill: #D3170D;
+  transition: fill 0.3s ease;
+}
+
+.scroll-cta:hover path,
+.scroll-cta:focus path {
+  fill: #FABC2A;
+}
+
+i.fa {
+  font-size: 3.5rem;
+}
+
+i.fa::before {
+  padding: 15px;
+  font-size: inherit;
+  background-color: var(--engineering-orange);
+  color: white;
+  transition-duration: .3s;
+}
+
+.links-list a:hover i::before,
+.links-list a:focus i::before {
+  background-color: var(--selective-yellow);
+  color: var(--cardinal-purple);
+}
