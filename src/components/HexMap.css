@@ -1,0 +1,24 @@
+/* HexMap D3 Component Styles */
+
+.hex-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.hex-map-container svg {
+  overflow: visible;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .hex-map-container {
+    padding: 1rem;
+  }
+}

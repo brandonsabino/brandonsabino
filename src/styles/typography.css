@@ -1,10 +1,5 @@
-/* Tilt Neon */
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-/* Protest Guerrilla */
-@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
-/* Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* Squada One & Overpass */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Squada+One&display=swap');
 
 .screen-reader-text {
   position: absolute;
@@ -23,18 +18,15 @@ h4,
 h5,
 h6,
 header {
-  font-family: 'Avenir';
+  font-family: 'Squada One', sans-serif;
+  font-weight: 400;
   margin: 0;
-  color: var(--cardinal-purple);
+  color: var(--jwst-beryllium);
 }
 
 h1 {
-  font-family: 'Protest Guerrilla';
   text-transform: capitalize;
-  font-weight: 300;
-  text-shadow: 1px 1px -1px black;
   font-size: 88px;
-  font-weight: 800;
 }
 
 h3,
@@ -46,17 +38,10 @@ h4 {
 h2 {
   position: relative;
   width: fit-content;
-  font-family: 'Protest Guerrilla';
 }
 
 h2::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 100%;
-  bottom: -4px;
-  height: 3px;
-  background-color: var(--slate-gray);
+  content: none;
 }
 
 p {
@@ -67,9 +52,9 @@ p {
 
 p,
 span {
-  color: #2E0219;
-  font-family: 'Quicksand', 'Avenir';
-  font-weight: 500;
+  color: var(--jwst-white);
+  font-family: 'Overpass', sans-serif;
+  font-weight: 200;
 }
 
 span {
