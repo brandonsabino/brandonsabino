@@ -1,0 +1,281 @@
+/* Welcome Section Styles - With Scroll Morphing */
+
+.welcome-section {
+  /* Default CSS custom property values */
+  --scroll-progress: 0;
+  --hex-scale: 1;
+  --name-scale: 1;
+  --subtitle-opacity: 1;
+  --indicator-opacity: 1;
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  scroll-snap-align: start;
+}
+
+.welcome-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  transform-origin: top center;
+}
+
+.ascii-container {
+  position: relative;
+  flex: 1;
+  height: 50vh;
+  min-height: 400px;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(var(--hex-scale));
+  transform-origin: center center;
+  transition: transform 0.05s ease-out;
+  will-change: transform;
+}
+
+/* Ensure ASCII effect table is transparent */
+.ascii-container table {
+  background: transparent !important;
+}
+
+.ascii-container td {
+  background: transparent !important;
+}
+
+.name-container {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 2rem;
+  transform: scale(var(--name-scale));
+  transform-origin: left center;
+  transition: transform 0.05s ease-out;
+  will-change: transform;
+}
+
+.welcome-name {
+  font-family: 'Squada One', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #c9a227;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.welcome-subtitle {
+  font-family: 'Overpass', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #f5f5f5;
+  margin: 1rem 0 0 0;
+  font-weight: 200;
+  opacity: calc(0.8 * var(--subtitle-opacity));
+  transition: opacity 0.05s ease-out;
+  will-change: opacity;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: bounce 2s ease-in-out infinite;
+  opacity: var(--indicator-opacity);
+  transition: opacity 0.05s ease-out;
+  will-change: opacity;
+}
+
+.scroll-indicator span {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.85rem;
+  color: #c9a227;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: none;
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #c9a227;
+  border-bottom: 2px solid #c9a227;
+  transform: rotate(45deg);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* =============================================
+   STICKY HEADER (appears after morph)
+   ============================================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 1rem;
+  z-index: 100;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.site-header.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header-hex {
+  width: 32px;
+  height: 32px;
+  background: #c9a227;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  flex-shrink: 0;
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-name {
+  font-family: 'Squada One', sans-serif;
+  font-size: 1.25rem;
+  color: #c9a227;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Header Social Icons */
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  color: var(--jwst-white);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #f5f5f5;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  color: #c9a227;
+  opacity: 1;
+  background: rgba(201, 162, 39, 0.1);
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.social-icon path {
+  fill: currentColor;
+}
+
+/* =============================================
+   MOBILE RESPONSIVE
+   ============================================= */
+
+@media (max-width: 768px) {
+  .welcome-content {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .ascii-container {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    height: 45vh;
+    min-height: 280px;
+    transform-origin: center center;
+  }
+
+  .name-container {
+    flex: none;
+    max-width: 100%;
+    align-items: center;
+    padding-left: 0;
+    margin-top: 1rem;
+    transform-origin: center center;
+  }
+
+  .welcome-name {
+    font-size: 2.5rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+
+  .site-header {
+    padding: 0 1rem;
+  }
+
+  .header-social {
+    gap: 0.25rem;
+  }
+
+  .social-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-hex {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header-name {
+    font-size: 1rem;
+  }
+}
