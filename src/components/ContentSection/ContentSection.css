@@ -1670,7 +1670,7 @@
 
   .mobile-hud-label {
     font-family: 'Overpass Mono', monospace;
-    font-size: 0.6rem;
+    font-size: 1rem;
     color: var(--beryllium-gold);
     letter-spacing: 0.1em;
     opacity: 0.7;
@@ -1678,7 +1678,7 @@
 
   .mobile-hud-value {
     font-family: 'Overpass Mono', monospace;
-    font-size: 0.65rem;
+    font-size: 1rem;
     color: var(--text-primary);
     letter-spacing: 0.05em;
   }
@@ -1688,7 +1688,7 @@
     align-items: center;
     gap: 0.4rem;
     font-family: 'Overpass Mono', monospace;
-    font-size: 0.6rem;
+    font-size: 1rem;
     color: #4ade80;
     letter-spacing: 0.1em;
   }
@@ -1703,7 +1703,7 @@
 
   .mobile-hud-id {
     font-family: 'Overpass Mono', monospace;
-    font-size: 0.6rem;
+    font-size: 1rem;
     color: var(--text-primary);
     opacity: 0.5;
     letter-spacing: 0.05em;
@@ -1768,6 +1768,7 @@
   }
 
   .mobile-content-experience,
+  .mobile-content-freelancing,
   .mobile-content-projects {
     display: flex;
     flex-direction: column;
@@ -1775,15 +1776,17 @@
   }
 
   .mobile-experience-item,
+  .mobile-freelancing-item,
   .mobile-project-item {
     padding-left: 0.75rem;
     border-left: 2px solid rgba(201, 162, 39, 0.3);
   }
 
   .mobile-experience-role,
+  .mobile-freelancing-project,
   .mobile-project-name {
     font-family: var(--font-family-heading);
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--beryllium-gold);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1791,9 +1794,10 @@
   }
 
   .mobile-experience-company,
+  .mobile-freelancing-client,
   .mobile-project-tech {
     font-family: var(--font-family-body);
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: var(--text-primary);
     opacity: 0.7;
   }
@@ -1806,11 +1810,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    justify-content: center;
   }
 
-  .mobile-contact-link {
+  a.mobile-contact-link,
+  a.mobile-contact-link:visited   {
     font-family: var(--font-family-body);
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--beryllium-gold);
     text-decoration: none;
     padding: 0.5rem 1rem;
