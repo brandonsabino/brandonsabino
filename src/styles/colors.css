@@ -1,15 +1,6 @@
 :root {
-  /* CSS HEX */
-  --engineering-orange: #d3170dff;
-  --selective-yellow: #fabc2aff;
-  --slate-gray: #687784ff;
-  --alice-blue: #e7f1f6ff;
-  --rich-black: #001011ff;
-  --cardinal-purple: #2E0219;
-
   /* JWST Honeycomb Theme */
   --jwst-black: #0a0a0a;
   --jwst-beryllium: #c9a227;
-  --jwst-gold-light: #d4af37;
   --jwst-white: #f5f5f5;
 }

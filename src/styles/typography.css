@@ -16,12 +16,11 @@ h2,
 h3,
 h4,
 h5,
-h6,
-header {
+h6 {
   font-family: 'Squada One', sans-serif;
   font-weight: 400;
   margin: 0;
-  color: var(--jwst-beryllium);
+  color: var(--jwst-white);
 }
 
 h1 {
@@ -58,7 +57,7 @@ span {
 }
 
 span {
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 20px;
 }
 
@@ -77,15 +76,15 @@ a::before, a::after {
   content: '';
   position: absolute;
   display: inline-block;
-  bottom: -4px;
-  height: 3px;
+  bottom: 0;
+  height: 1px;
   transition: width 0.3s ease;
 }
 
 a::before {
   left: 0;
   width: 100%;
-  background-color: #D3170D;
+  background-color: #FFFFFF;
 }
 
 a:focus {

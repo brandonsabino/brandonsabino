@@ -1,6 +1,5 @@
 @import url(styles/colors.css);
 @import url(styles/typography.css);
-@import url(styles/icons.css);
 
 :root {
   --font-family-body: 'Overpass', sans-serif;
@@ -30,16 +29,6 @@ body {
   position: relative;
 }
 
-.honeycomb-section {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-  position: relative;
-  z-index: 1;
-}
 
 /* Starfield background */
 .App::before,
