@@ -1,5 +1,4 @@
 {
-  "homepage": "https://brandonsabino.github.io/",
   "name": "brandonsabino",
   "version": "0.1.0",
   "private": true,
@@ -15,24 +14,17 @@
     "d3-geo": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
     "three": "^0.182.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "echo 'www.brandonsabino.com' > ./build/CNAME && gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "analyze": "npm run build -- --stats && webpack-bundle-analyzer build/stats.json"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "deploy": "echo 'www.brandonsabino.com' > ./dist/CNAME && gh-pages -d dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "browserslist": {
     "production": [
@@ -50,11 +42,15 @@
     "@types/node": "^25.1.0",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/ui": "^4.1.2",
     "autoprefixer": "^10.4.24",
     "gh-pages": "^6.0.0",
+    "jsdom": "^29.0.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
     "typescript": "^5.9.3",
-    "webpack-bundle-analyzer": "^4.10.2"
+    "vite": "^8.0.3",
+    "vitest": "^4.1.2"
   }
 }
